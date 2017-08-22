@@ -6,11 +6,8 @@
         <meta name="description" content="Placa do Cirio">
         <meta name="author" content="Henrique Pappis">
         <title>Placa do Cirio</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Frijole">
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
         <link href="css/freelancer.css" rel="stylesheet">
     </head>
     <body id="page-top">
@@ -38,10 +35,10 @@
             <div class="container">
                 <div class="image-textarea">
                     <img id="placa" class="img-fluid" src="img/placacirio.png" alt="">
-                    <textarea id="caixa-texto" class="text-center" rows="5" data-role="none" placeholder="Digite aqui sua mensagem." onkeydown="contador();"></textarea>
+                    <textarea id="caixa-texto" class="text-center" rows="5" maxlength="100" data-role="none" placeholder="Digite aqui sua mensagem."></textarea>
                 </div>
                 <div class="intro-text">
-                    <button type="button" class="btn btn-primary btn-outline"><i class="fa fa-arrow-circle-down fa-3x" aria-hidden="true"></i></button>
+                    <button type="button" class="btn btn-primary btn-outline"><i class="fa fa-arrow-circle-down fa-3x" aria-hidden="true" onclick="salvar();" ></i></button>
                     <hr class="star-light">
                     <span class="skills">Não deixe de dar aquela conferida nos conteúdos desse rico rapaz.</span>
                 </div>
@@ -55,22 +52,30 @@
                 <hr class="star-primary">
                 <div class="row">
                     <div class="col-sm-4 portfolio-item">
-                        <iframe class="portfolio-link" width="352" height="251" src="https://www.youtube.com/embed/xgO8hShsSZk" frameborder="0" allowfullscreen data-toggle="modal"></iframe>
+                        <img class="portfolio-link" src="img/youtube.png" data-toggle="modal" width="352" height="251">
+                        <!-- <iframe class="portfolio-link" width="352" height="251" src="https://www.youtube.com/embed/xgO8hShsSZk" frameborder="0" allowfullscreen data-toggle="modal"></iframe> -->
                     </div>
                     <div class="col-sm-4 portfolio-item">
-                        <iframe class="portfolio-link" width="352" height="251" src="https://www.youtube.com/embed/8RKbNJTsJOE" frameborder="0" allowfullscreen data-toggle="modal"></iframe>
+                        <img class="portfolio-link" src="img/youtube.png" data-toggle="modal" width="352" height="251">
+                        <!-- <iframe class="portfolio-link" width="352" height="251" src="https://www.youtube.com/embed/8RKbNJTsJOE" frameborder="0" allowfullscreen data-toggle="modal"></iframe> -->
+                        
                     </div>
                     <div class="col-sm-4 portfolio-item">
-                        <iframe class="portfolio-link" width="352" height="251" src="https://www.youtube.com/embed/3TJPkCidktI" frameborder="0" allowfullscreen data-toggle="modal"></iframe>
+                        <img class="portfolio-link" src="img/youtube.png" data-toggle="modal" width="352" height="251">
+                        <!-- <iframe class="portfolio-link" width="352" height="251" src="https://www.youtube.com/embed/3TJPkCidktI" frameborder="0" allowfullscreen data-toggle="modal"></iframe> -->
                     </div>
                     <div class="col-sm-4 portfolio-item">
-                    <iframe class="portfolio-link" width="352" height="251" src="https://www.youtube.com/embed/JLyy4_2qi9g" frameborder="0" allowfullscreen data-toggle="modal"></iframe>
+                        <img class="portfolio-link" src="img/youtube.png" data-toggle="modal" width="352" height="251">
+                    <!-- <iframe class="portfolio-link" width="352" height="251" src="https://www.youtube.com/embed/JLyy4_2qi9g" frameborder="0" allowfullscreen data-toggle="modal"></iframe> -->
+                    <!--  -->
                     </div>
                     <div class="col-sm-4 portfolio-item">
-                        <iframe class="portfolio-link" width="352" height="251" src="https://www.youtube.com/embed/XzTKPGGU-24" frameborder="0" allowfullscreen data-toggle="modal"></iframe>
+                        <img class="portfolio-link" src="img/youtube.png" data-toggle="modal" width="352" height="251">
+                        <!-- <iframe class="portfolio-link" width="352" height="251" src="https://www.youtube.com/embed/XzTKPGGU-24" frameborder="0" allowfullscreen data-toggle="modal"></iframe> -->
                     </div>
                     <div class="col-sm-4 portfolio-item">
-                        <iframe class="portfolio-link" width="352" height="251" src="https://www.youtube.com/embed/6ChfyIbLBJQ" frameborder="0" allowfullscreen data-toggle="modal"></iframe>
+                        <img class="portfolio-link" src="img/youtube.png" data-toggle="modal" width="352" height="251">
+                        <!-- <iframe class="portfolio-link" width="352" height="251" src="https://www.youtube.com/embed/6ChfyIbLBJQ" frameborder="0" allowfullscreen data-toggle="modal"></iframe> -->
                     </div>
                 </div>
             </div>
@@ -109,7 +114,8 @@
                                     </a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a class="btn-social btn-outline" href="https://www.youtube.com/user/ciriotv" target="_blank">                                        <i class="fa fa-fw fa-youtube"></i>
+                                    <a class="btn-social btn-outline" href="https://www.youtube.com/user/ciriotv" target="_blank">
+                                        <i class="fa fa-fw fa-youtube"></i>                                    
                                     </a>
                                 </li>
                                 <li class="list-inline-item">
@@ -134,8 +140,8 @@
         <script src="vendor/popper/popper.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
         <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-        <script src="js/jqBootstrapValidation.js"></script>
-        <script src="js/contact_me.js"></script>
         <script src="js/freelancer.min.js"></script>
+        <script src="js/html2canvas.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>
