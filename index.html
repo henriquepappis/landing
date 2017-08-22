@@ -9,6 +9,21 @@
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="css/freelancer.css" rel="stylesheet">
+        <!-- You can use Open Graph tags to customize link previews.
+        Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+        <meta property="og:url"             content="http://henriquepappis.com/placacirio" />
+        <meta property="og:type"            content="website" />
+        <meta property="og:title"           content="Placa Mauricio Cirio" />
+        <meta property="og:description"     content="Placa Mauricio Cirio - Monte a sua também" />
+        <meta property="og:image"           content="http://henriquepappis.com/placacirio/images/placacirio.png" />
+
+        <meta name="twitter:card"           content="Placa do Cirio">
+        <meta name="twitter:site"           content="http://henriquepappis.com">
+        <meta name="twitter:creator"        content="@henriquepappis">
+        <meta name="twitter:title"          content="Placa do Cirio - Faça a sua também">
+        <meta name="twitter:description"    content="Placa desenvolvido com todo amor e carinho por esse rico rapaz.">
+        <meta name="twitter:image"          content="http://henriquepappis.com/placacirio/images/placacirio.png">
+
     </head>
     <body id="page-top">
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -38,7 +53,15 @@
                     <textarea id="caixa-texto" class="text-center" rows="5" maxlength="100" data-role="none" placeholder="Digite aqui sua mensagem."></textarea>
                 </div>
                 <div class="intro-text">
-                    <button type="button" class="btn btn-primary btn-outline"><i class="fa fa-arrow-circle-down fa-3x" aria-hidden="true" onclick="salvar();" ></i></button>
+                    <a href="#"><button type="button" class="btn btn-outline fa fa-download fa-3x"> Download</button></a>
+                    <!-- <div class="fb-share-button" data-href="http://henriquepappis.com/placacirio/nicedit.html" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%2Fpessoal%2Flanding%2F&amp;src=sdkpreparse">Compartilhar</a></div> -->
+                    <a href="http://google.com">
+                        <button type="button" class="btn btn-outline fa fa-facebook-official fa-3x"> Compartilhar</button>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?text=Luciano%20Putão">
+                        <button type="button" class="btn btn-outline fa fa-twitter 3x"> Tweet</button>
+                    </a>
+
                     <hr class="star-light">
                     <span class="skills">Não deixe de dar aquela conferida nos conteúdos desse rico rapaz.</span>
                 </div>
@@ -58,7 +81,7 @@
                     <div class="col-sm-4 portfolio-item">
                         <img class="portfolio-link" src="img/youtube.png" data-toggle="modal" width="352" height="251">
                         <!-- <iframe class="portfolio-link" width="352" height="251" src="https://www.youtube.com/embed/8RKbNJTsJOE" frameborder="0" allowfullscreen data-toggle="modal"></iframe> -->
-                        
+
                     </div>
                     <div class="col-sm-4 portfolio-item">
                         <img class="portfolio-link" src="img/youtube.png" data-toggle="modal" width="352" height="251">
@@ -115,7 +138,7 @@
                                 </li>
                                 <li class="list-inline-item">
                                     <a class="btn-social btn-outline" href="https://www.youtube.com/user/ciriotv" target="_blank">
-                                        <i class="fa fa-fw fa-youtube"></i>                                    
+                                        <i class="fa fa-fw fa-youtube"></i>
                                     </a>
                                 </li>
                                 <li class="list-inline-item">
@@ -143,5 +166,14 @@
         <script src="js/freelancer.min.js"></script>
         <script src="js/html2canvas.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/twitterWidget.js"></script>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.10";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
     </body>
 </html>

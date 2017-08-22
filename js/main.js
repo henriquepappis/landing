@@ -11,7 +11,15 @@ function salvar(){
 				},
 				type: 'post',
 				success: function (response) {
-					location.href = response;
+					// $(location).attr({target: '_blank', href: response});
+					var a = $("<a>")
+    					.attr("href", response)
+    					.attr("download", "placaCirio.png")
+    					.appendTo("body");
+
+					a[0].click();
+
+					a.remove();
 				}
 			});
 		}
