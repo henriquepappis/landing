@@ -1,7 +1,6 @@
 function salvar(social = null){
 	switch (social){
 		case 'facebook':
-		alert('tey');
 			html2canvas($('.image-textarea'), {
 				onrendered: function (canvas) {
 					var imagedata = canvas.toDataURL('image/png');
@@ -16,7 +15,8 @@ function salvar(social = null){
 						success: function (response) {
 							console.log(response);
 							$("meta[property='og\\:image']").attr("content", "http://henriquepappis.com/cirio/saves/23-08-2017-14:23:15");
-							var a = $("<a>").attr("href", "https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhenriquepappis.com%2Fcirio%2F&amp;src=sdkpreparse");
+							// var a = $("<a>").attr("href", "https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhenriquepappis.com%2Fcirio%2F&amp;src=sdkpreparse");
+							var a = $("<a>").attr("href", "https://www.facebook.com/sharer/sharer.php?app_id=141826299743153&u=http%3A%2F%2Fhenriquepappis.com%2Fcirio%2F&amp;src=sdkpreparse&image=http%3A%2F%2Fhenriquepappis.com%2Fcirio%2F"+response+"&display=popup&ref=plugin&src=share_button");
  							a[0].click();
 							a.remove();
 						}
