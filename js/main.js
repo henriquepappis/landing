@@ -1,8 +1,28 @@
 function salvar(social = null){
 	switch (social){
 		case 'facebook':
-			var a = $("<a>").attr("href", "http://henriquepappis.com/cirio/saves/");
-			alert('vai gerar face');
+		alert('tey');
+			html2canvas($('.image-textarea'), {
+				onrendered: function (canvas) {
+					var imagedata = canvas.toDataURL('image/png');
+					var imgdata = imagedata.replace(/^data:image\/(png|jpg);base64,/, "");
+
+					$.ajax({
+						url: 'salvarImagem.php',
+						data: {
+							imgdata:imgdata
+						},
+						type: 'post',
+						success: function (response) {
+							console.log(response);
+							$("meta[property='og\\:image']").attr("content", "http://henriquepappis.com/cirio/saves/23-08-2017-14:23:15");
+							var a = $("<a>").attr("href", "https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhenriquepappis.com%2Fcirio%2F&amp;src=sdkpreparse");
+ 							a[0].click();
+							a.remove();
+						}
+					});
+				}
+			});
 			break;
 
 		case 'twitter':
