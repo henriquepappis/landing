@@ -6,7 +6,6 @@ function salvar(social = null){
 			break;
 
 		case 'twitter':
-			alert(metatag2);
 			html2canvas($('.image-textarea'), {
 				onrendered: function (canvas) {
 					var imagedata = canvas.toDataURL('image/png');
