@@ -1,4 +1,4 @@
-function salvar(social = null){	
+function salvar(social = null){
 	switch (social){
 		case 'facebook':
 			var a = $("<a>").attr("href", "http://henriquepappis.com/cirio/saves/");
@@ -18,7 +18,8 @@ function salvar(social = null){
 						},
 						type: 'post',
 						success: function (response) {
-							$("meta[name='twitter\\:image']").attr("content", "http://henriquepappis.com/cirio/img/"+response);
+							console.log(reponse);
+							$("meta[name='twitter\\:image']").attr("content", "http://henriquepappis.com/cirio/saves/"+response);
 							var a = $("<a>").attr("href","https://twitter.com/intent/tweet?text=Acabei%20de%20criar%20minha%20'Placa%20do%20Cirio'%2E%20Crie%20a%20sua%20também%2E%20http://henriquepappis.com/cirio/").appendTo("body");
 							a[0].click();
 							a.remove();
