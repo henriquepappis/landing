@@ -6,8 +6,7 @@ function salvar(social = null){
 			break;
 
 		case 'twitter':
-			$("meta[name='twitter\\:image']").attr("content", "http://henriquepappis.com/cirio/img/youtube.png");
-			$("meta[property='og\\:image']").attr("content", "http://henriquepappis.com/cirio/img/youtube.png");
+			alert(metatag2);
 			html2canvas($('.image-textarea'), {
 				onrendered: function (canvas) {
 					var imagedata = canvas.toDataURL('image/png');
@@ -20,6 +19,7 @@ function salvar(social = null){
 						},
 						type: 'post',
 						success: function (response) {
+							$("meta[name='twitter\\:image']").attr("content", "http://henriquepappis.com/cirio/img/"+response);
 							var a = $("<a>").attr("href","https://twitter.com/intent/tweet?text=Acabei%20de%20criar%20minha%20'Placa%20do%20Cirio'%2E%20Crie%20a%20sua%20também%2E%20http://henriquepappis.com/cirio/").appendTo("body");
 							a[0].click();
 							a.remove();
