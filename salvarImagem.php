@@ -1,4 +1,5 @@
 <?php
+	include "placaPage.php";
 	$data = new DateTime();
     $data = $data->format('d-m-Y-H:i:s');
 
@@ -14,5 +15,11 @@
 	//monta a imagem gerada com o nome
 	file_put_contents($file,$imagedata);
 
+	$arquivoGerado = new Arquivo;
+	$arquivoGerado->createPage($file);
+
 	// retorna o caminho da imagem gerada.
-	echo $file;
+	if(empty($file) || is_null($file)){
+		return 'timblim';
+	}
+	return $arquivoGerado;

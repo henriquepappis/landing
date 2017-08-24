@@ -39,10 +39,9 @@ function salvar(social = null){
 						type: 'post',
 						success: function (response) {
 							console.log(response);
-							$("meta[name='twitter\\:image']").attr("content", "http://henriquepappis.com/cirio/"+response);
-							var a = $("<a>").attr("href","https://twitter.com/intent/tweet?text=Acabei%20de%20criar%20minha%20'Placa%20do%20Cirio'%2E%20Crie%20a%20sua%20também%2E%20http://henriquepappis.com/cirio/").appendTo("body");
-							a[0].click();
-							a.remove();
+							// var a = $("<a>").attr("href","https://twitter.com/intent/tweet?text=Acabei%20de%20criar%20minha%20'Placa%20do%20Cirio'%2E%20Crie%20a%20sua%20também%2E%20http://henriquepappis.com/cirio/placaPage.php").appendTo("body");
+							// a[0].click();
+							// a.remove();
 						}
 					});
 				}
