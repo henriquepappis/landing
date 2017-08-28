@@ -1,4 +1,5 @@
 function salvar(social = null){
+	trataTexto($('#caixa-texto').val());
 	switch (social){
 		case 'facebook':
 			html2canvas($('.image-textarea'), {
@@ -13,7 +14,6 @@ function salvar(social = null){
 						},
 						type: 'post',
 						success: function (response) {
-							console.log(response);
 							$("meta[property='og\\:image']").attr("content", "http://henriquepappis.com/cirio/saves/23-08-2017-14:23:15");
 							// var a = $("<a>").attr("href", "https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhenriquepappis.com%2Fcirio%2F&amp;src=sdkpreparse");
 							var a = $("<a>").attr("href", "https://www.facebook.com/sharer/sharer.php?app_id=141826299743153&u=http%3A%2F%2Fhenriquepappis.com%2Fcirio%2F&amp;src=sdkpreparse&image=http%3A%2F%2Fhenriquepappis.com%2Fcirio%2F"+response+"&display=popup&ref=plugin&src=share_button");
@@ -66,7 +66,10 @@ function salvar(social = null){
 							a.remove();
 						}
 					});
-				}
+				},
+				logging: true,
+				background: undefined,
+				letterRendering: true,
 			});
 			break;
 
@@ -74,4 +77,20 @@ function salvar(social = null){
 			alert('Erro na solicitação.');
 			break;
 	}
+}
+
+var textarea = document.getElementById("caixa-texto");
+
+textarea.addEventListener("paste", function() {
+    
+    if (this.value !== "")
+    {
+        this.value = this.value + "\n";
+    }
+
+}, false);
+
+function trataTexto(texto){
+	texto = texto.replace(/\n\r?/g, '<br />');
+	return false;
 }

@@ -4,6 +4,11 @@
 * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/master/LICENSE)
 */
 
+@font-face {
+    font-family: Frijole;
+    src: url('../fonts/Frijole-Regular.ttf');
+}
+
 body {
     overflow-x: hidden;
 }
@@ -558,21 +563,22 @@ fieldset[disabled] .btn-success:hover {
 
 .image-textarea {
     position: relative;
+    height: 100%;
 }
 
 .image-textarea img {
     display: block;
 }
 
-.image-textarea textarea {
-    font-family: Frijole; src: url('../fonts/Frijole-Regular.ttf');
+#caixa-texto {
+    font-family: Frijole;
     font-size: 180%;
+    color: black;
     position: absolute;
     top: 42%;
     left: 14%;
     height: 50%;
     width: 66%;
-    border: none;
     background: transparent;
     -ms-transform: rotate(-1.5deg);
     transform: rotate(-1.5deg);
@@ -580,4 +586,6 @@ fieldset[disabled] .btn-success:hover {
     white-space: pre-wrap;
     resize: none;
     overflow:  hidden !important;
+    word-wrap: break-word;
+    border: none;
 }
