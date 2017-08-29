@@ -590,7 +590,7 @@ fieldset[disabled] .btn-success:hover {
     resize: none;
     overflow:  hidden !important;
     word-wrap: break-word;
-    border: 3px solid green;
+    border: none;
 }
 
 #caixa-texto:focus {
