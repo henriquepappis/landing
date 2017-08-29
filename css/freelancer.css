@@ -561,9 +561,12 @@ fieldset[disabled] .btn-success:hover {
     outline: none;
 }
 
+.img-responsive {
+    width: 100%;
+}
+
 .image-textarea {
     position: relative;
-    height: 100%;
 }
 
 .image-textarea img {
@@ -576,9 +579,9 @@ fieldset[disabled] .btn-success:hover {
     color: black;
     position: absolute;
     top: 42%;
-    left: 14%;
-    height: 50%;
-    width: 66%;
+    left: 9%;
+    height: 48%;
+    width: 77%;
     background: transparent;
     -ms-transform: rotate(-1.5deg);
     transform: rotate(-1.5deg);
@@ -587,5 +590,9 @@ fieldset[disabled] .btn-success:hover {
     resize: none;
     overflow:  hidden !important;
     word-wrap: break-word;
-    border: none;
+    border: 3px solid green;
+}
+
+#caixa-texto:focus {
+    outline: 0px solid transparent;
 }
