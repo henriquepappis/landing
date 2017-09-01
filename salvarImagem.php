@@ -1,6 +1,5 @@
 <?php
 	include "placaPage.php";
-	require_once ('vendor/joshcam/mysqli-database-class/MysqliDb.php');
 	require_once ('functions/functions.php');
 	$data = new DateTime();
     $data = $data->format('YmdHis');
