@@ -33,7 +33,6 @@
         	'username' => 'henriquepappis',
 			'password' => 'dica300986',
         	'db'=> 'cirio',
-        	'port' => 41890
         )
 	);
 
