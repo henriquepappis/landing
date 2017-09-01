@@ -30,12 +30,7 @@
 
 	$db = new MysqliDB ();
 
-	$data = Array ("path" => $arquivoGerado,
-	               "clicks" => 0,
-	               "ip" => $clienteIP
-	);
+	$db->connect();
 
-	$id = $db->insert('saves', $data);
-
-	if($id)
+	if($db)
 		return $arquivoGerado;
