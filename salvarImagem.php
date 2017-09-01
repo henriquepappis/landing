@@ -1,6 +1,8 @@
 <?php
 	include "placaPage.php";
-	require_once ('functions/functions.php');
+	include "functions/functions.php";
+	include "class/db.php";
+
 	$data = new DateTime();
     $data = $data->format('YmdHis');
 
@@ -26,14 +28,7 @@
 
 	$clienteIP = get_client_ip();
 
-	$db = new MysqliDb (
-		Array (
-    		'host' => 'mysql796.umbler.com',
-        	'username' => 'henriquepappis',
-			'password' => 'dica300986',
-        	'db'=> 'cirio',
-        )
-	);
+	$db = new MysqliDB ();
 
 	$data = Array ("path" => $arquivoGerado,
 	               "clicks" => 0,
