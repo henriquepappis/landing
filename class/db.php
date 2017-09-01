@@ -2,10 +2,10 @@
 
 	class MysqliDB {
 
-		protected $host 		= "mysql796.umbler.com";
+		protected $host 		= "127.0.0.1";
 		protected $database 	= "cirio";
-		protected $user		= "henriquepappis";
-		protected $pass		= "dica300986";
+		protected $user			= "henriquepappis";
+		protected $pass			= "dica300986";
 		// protected $port		= "41890";
 
 		public function connect() {
