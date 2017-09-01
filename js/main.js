@@ -38,7 +38,7 @@ function salvar(social = null){
 						},
 						type: 'post',
 						success: function (response) {
-							console.log(response);
+							console.log("Resposta: "+response);
 							// var a = $("<a>").attr("href","https://twitter.com/intent/tweet?text=Acabei%20de%20criar%20minha%20'Placa%20do%20Cirio'%2E%20Crie%20a%20sua%20também%2E%20http://henriquepappis.com/cirio/placaPage.php").appendTo("body");
 							// a[0].click();
 							// a.remove();
@@ -53,7 +53,6 @@ function salvar(social = null){
 				onrendered: function (canvas) {
 					var imagedata = canvas.toDataURL('image/png');
 					var imgdata = imagedata.replace(/^data:image\/(png|jpg);base64,/, "");
-
 					$.ajax({
 						url: 'salvarImagem.php',
 						data: {
@@ -61,13 +60,13 @@ function salvar(social = null){
 						},
 						type: 'post',
 						success: function (response) {
+							console.log("Resposta: "+response);
 							var a = $("<a>").attr("href", response).attr("download", "placaCirio.png").appendTo("body");
 							a[0].click();
 							a.remove();
 						}
 					});
 				},
-				logging: true,
 				background: undefined,
 				letterRendering: true,
 			});
@@ -82,7 +81,6 @@ function salvar(social = null){
 var textarea = document.getElementById("caixa-texto");
 
 textarea.addEventListener("paste", function() {
-    
     if (this.value !== "")
     {
         this.value = this.value + "\n";

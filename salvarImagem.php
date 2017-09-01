@@ -1,7 +1,9 @@
 <?php
 	include "placaPage.php";
+	require_once ('vendor/joshcam/mysqli-database-class/MysqliDb.php');
+	require_once ('functions/functions.php');
 	$data = new DateTime();
-    $data = $data->format('d-m-Y-H:i:s');
+    $data = $data->format('YmdHis');
 
     // nome do arquivo que será gerado.
 	$filename = $data;
@@ -20,6 +22,27 @@
 
 	// retorna o caminho da imagem gerada.
 	if(empty($file) || is_null($file)){
-		return 'timblim';
+		return 'Erro ao processar o arquivo.';
 	}
-	return $arquivoGerado;
+
+	$clienteIP = get_client_ip();
+
+	$db = new MysqliDb (
+		Array (
+    		'host' => 'mysql796.umbler.com',
+        	'username' => 'henriquepappis',
+			'password' => 'dica300986',
+        	'db'=> 'cirio',
+        	'port' => 41890
+        )
+	);
+
+	$data = Array ("path" => $arquivoGerado,
+	               "clicks" => 0,
+	               "ip" => $clienteIP
+	);
+
+	$id = $db->insert('saves', $data);
+
+	if($id)
+		return $arquivoGerado;

@@ -243,14 +243,15 @@ header.masthead .intro-text .skills {
 
 #portfolio .portfolio-item {
     right: 0;
-    margin: 0 0 15px;
+    margin: 15px 15px 15px 15px;
 }
 #portfolio .portfolio-item .portfolio-link {
-    position: relative;
-    display: block;
-    max-width: 400px;
-    margin: 0 auto;
-    cursor: pointer;
+    /*position: relative;*/
+    /*display: block;*/
+    /*max-width: 400px;*/
+    margin: 10px;
+    border: 10px solid green;
+    /*cursor: pointer;*/
 }
 #portfolio .portfolio-item .portfolio-link .caption {
     position: absolute;
@@ -277,6 +278,7 @@ header.masthead .intro-text .skills {
 }
 #portfolio .portfolio-item .portfolio-link .caption .caption-content i {
     margin-top: -12px;
+
 }
 #portfolio .portfolio-item .portfolio-link .caption .caption-content h3,
 #portfolio .portfolio-item .portfolio-link .caption .caption-content h4 {
@@ -595,4 +597,10 @@ fieldset[disabled] .btn-success:hover {
 
 #caixa-texto:focus {
     outline: 0px solid transparent;
+}
+
+div[data-placeholder]:not(:focus):not([data-div-placeholder-content]):before {
+    content: attr(data-placeholder);
+    float: center;
+    color: #b3b3b3;
 }
